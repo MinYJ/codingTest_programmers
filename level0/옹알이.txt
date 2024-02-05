@@ -1,0 +1,43 @@
+function solution(babbling) {
+    let count = 0;
+    let collection = '';
+    for(let i=0; i<test.length; ++i) {
+        let head = 0;
+        let tail = 0;
+        let word;
+        for(let j=0; j<words.length; ++j) {
+            tail = tail + words[j].length;  // j:0 -> 3, 
+                                            // j:1 -> 2,
+                                            // j:2 -> 3,
+                                            // j:0 -> 6,
+                                            // j:0 -> 9,
+            if(tail <= test[i].length) {    
+                word = test[i].substring(head, tail); // j:0 -> (0, 3), 
+                                                      // j:1 -> (0, 2),
+                                                      // j:2 -> (0, 3),
+                                                      // j:0 -> (3, 6),
+                
+                if(word == words[j]) {       
+                    head = head + words[j].length;    // j:2 -> (3) 
+                                                      // j:0 -> (6)
+                    collection = collection + word;
+                    console.log(`if${word}:head->${head}:tail->${tail}`);
+                    console.log(`collection: ${collection}`);
+                    j = -1;                
+                } else {
+                    head = (head == 0) ? 0 : head - words[j].length;    // j:0 -> 0, j:1 -> 0
+                    tail = (tail == 0) ? 0 : tail - words[j].length;    // j:0 -> 0, j:1 -> 0
+                    console.log(`else${word}:head->${head}:tail->${tail}`);
+                }   
+            } else {
+                tail = tail - words[j].length;
+            }
+        }
+        if(collection == test[i]) {
+            count = count + 1;
+        }
+    }
+    console.log(`count: ${count}`);
+}
+const test = ["wooayayee"];
+const words = ["aya", "ye", "woo"];

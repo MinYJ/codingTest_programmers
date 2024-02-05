@@ -1,0 +1,6 @@
+(1)
+- 기저조건외에도 return 확인필요
+재귀함수
+function recursive()
+if(기저조건) return
+return

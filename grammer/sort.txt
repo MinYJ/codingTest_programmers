@@ -1,0 +1,42 @@
+(1)
+- 문자열 정렬은 sort()
+- 한글도 가능하다
+
+
+(2)
+array.sort((after,before)){
+}
+
+/*
+** after-before는 오름차순이다  
+** before-after는 내림차순이다
+** 음수일경우 두 개의 위치를 바꾼다
+** 양수일경우 움직이지 않는다
+*/
+
+(3)
+함수를 생략하면 숫자타입을 문자형타입으로 바꿔서 유니코드 코드포인트에따라 정렬된다
+array1.sort();
+console.log(array1);
+// Expected output: Array [1, 100000, 21, 30, 4]
+
+(4)
+map정렬
+
+var student = [
+    { name : "재석", age : 21},
+    { name : "광희", age : 25},
+    { name : "형돈", age : 13},
+    { name : "명수", age : 44}
+]
+
+/* 이름순으로 정렬 */
+student.sort(function(a, b) { // 오름차순
+    return a.name < b.name ? -1 : a.name > b.name ? 1 : 0;
+    // 광희, 명수, 재석, 형돈
+});
+
+student.sort(function(a, b) { // 내림차순
+    return a.name > b.name ? -1 : a.name < b.name ? 1 : 0;
+    // 형돈, 재석, 명수, 광희
+});

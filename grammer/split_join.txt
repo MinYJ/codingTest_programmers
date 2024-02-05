@@ -1,0 +1,7 @@
+(1)
+"  abc".split(" ");
+-> ['',a,b,c];
+
+
+(2) 배열이 하나일경우 join이 안됨
+console.log(['a'].join(" + "));

@@ -1,0 +1,1 @@
+letter.split(' ').map(v=>morse[v]).join('');

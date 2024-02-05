@@ -1,0 +1,12 @@
+function solution(num_list) {
+    const lastIndex = num_list.length - 1;
+    const stopIndex = Math.floor(num_list.length / 2) - 1;
+    
+    for(let i=0; i<=stopIndex; i++){
+        const temp = num_list[i];
+        num_list[i] = num_list[lastIndex-i];
+        num_list[lastIndex-i] = temp;
+    }
+    
+    return num_list;
+}

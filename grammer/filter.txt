@@ -1,0 +1,4 @@
+(1) 이중배열 filter돌리면 이중배열로 받는다
+db => [["rardss", "123"], ["yyoom", "1234"], ["meosseugi", "1234"]]
+const member = db.filter(v=> v[0] === id_pw[0]);
+console.log(member); =>[ [ 'meosseugi', '1234' ] ]

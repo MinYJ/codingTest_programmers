@@ -1,0 +1,24 @@
+(1) set
+const result = [...new Set([2,2,3,3,4])];
+console.log(result);
+
+(2) filter()와 indexOf()
+const array = [2,2,2,2,3,3,4];
+const result = array.filter((v,i)=>{
+    console.log(`${v}-${i}-${array.indexOf(v)}`);
+    return array.indexOf(v) === i;
+});
+
+console.log(result);
+
+(3) reduce와 includes
+const array = [2,2,2,2,3,3,4];
+array.reduce((acc, cur)=> {
+   return acc.includes(cur) ? acc : [...acc, cur];
+},[])
+
+console.log([...[], 1]);
+
+(4) Object.keys()
+const array = [2,2,2,2,3,3,4];
+Object.keys(Object.fromEntries(array.map(v => [v, null])));

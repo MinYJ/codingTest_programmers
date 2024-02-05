@@ -1,0 +1,12 @@
+(1)아스키코드로 바꾸기
+let convertString = "ABC";
+convertString.charCodeAt(0);
+console.log(convertString.charCodeAt(0));
+// 출력: 65
+console.log(convertString.charCodeAt(1));
+// 출력: 66
+console.log(convertString.charCodeAt(2));
+// 출력: 67
+
+(2) 문자로바꾸기
+String.fromCharCode(65);

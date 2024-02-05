@@ -1,0 +1,2 @@
+(1) both
+- indexOf, includes, slice, repalceAll(중복제거, 원본훼손하지않음)
