@@ -1,2 +1,5 @@
 (1) x제외된 숫자만 꺼내고 싶은경우
 console.log('3x'.slice(0, '3x'.indexOf('x')));
+
+(2) 문자열_재귀함수사용시
+'a'.slice(1) -> undefined

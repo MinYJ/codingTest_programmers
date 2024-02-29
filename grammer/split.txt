@@ -1,0 +1,18 @@
+(1) split한 결과값을 배열로 반환한다
+"  abc".split(" ");
+-> ['',a,b,c];
+
+(2) 배열이 하나일경우 join이 안됨
+console.log(['a'].join(" + "));
+
+(3) 같은문자열을 split하면 ''의 값이 하나더 증가
+const a = "111a";
+console.log(a.split("11"));
+[ '', '1a' ]
+
+const a = "1111";
+console.log(a.split("1"));
+[ '', '', '', '', '' ]
+
+실질적으로 "11"값이 몇개 있었는지 출력하기 위해서는 
+a.split("11").length - 1을 해야한다

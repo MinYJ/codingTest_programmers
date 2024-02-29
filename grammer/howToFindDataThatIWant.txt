@@ -1,0 +1,6 @@
+(1) indexOf, includes
+- 배열로 만든다
+- indexOf를 통해서 위치값찾기
+- includes를 통해서 원하는값이 있는지 없는지 찾기
+
+(2) filter와indexOf , set과filter

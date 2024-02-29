@@ -1,2 +1,6 @@
 (1) both
 - indexOf, includes, slice, repalceAll(중복제거, 원본훼손하지않음)
+
+(2)
+- replaceAll은 string에서만 사용
+- 원본값훼손하지않음

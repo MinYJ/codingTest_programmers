@@ -27,3 +27,5 @@ const getMode = (arr) => {
     }
     return parseInt(modeKey);
 }
+const obj = {"value": 10, "count": 100};
+console.log(Object.keys(obj)[0]);

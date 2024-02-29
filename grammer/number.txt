@@ -1,0 +1,2 @@
+(1) parseInt
+parseInt("11111111", 2) binary로 표현할 수 있다

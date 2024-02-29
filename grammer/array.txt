@@ -2,7 +2,7 @@
 Array(n).fill().map((_,i)=> i+1)
 [...Array(n)].map((_,i)=> i+1)
 
-(2)
+(2) 배열, 문자열 모두가능
 원하는데이터유무확인 -> includes
 원하는데이터인덱스확인 -> indexOf
 
@@ -13,6 +13,20 @@ array[array.length-1]
 (4)
 forEach는 무조건 순회하기때문에 return false가 먹히지 않음
 forEach는 "abc"같은 문자열이 먹히지 않음
+forEach는 return도 먹히지않는다
 
 (5) 배열합치기
 let array = [...sameRange1, ...sameRange2, ...sameRange3];
+
+(6) 이중for문(얕은복사조심)
+    // let array = [...Array(n)];
+    // array = array.map((v)=>[...Array(n)]);
+    // array[0][0] = 5;
+    // console.log(array)
+    
+    let array = Array(n).fill([...Array(n)]);    
+    array[0][0] = 1;
+    console.log(array)
+
+Array.from(new Array(n), () => new Array(n).fill(0))
+

@@ -15,9 +15,10 @@ function solution(n) {
 
 function isPrimeNumber(n){
     let number = 2;
-    while(n <= Math.sqrt(n)) {
+    while(number <= Math.sqrt(n)) {
         if(n%number==0) return false;
         number = number+1;
     }
     return true;
 }
+console.log(isPrimeNumber(13));

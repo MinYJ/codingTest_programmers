@@ -1,0 +1,4 @@
+(1) ''와 join()
+const array = ['','four','']
+console.log(array.join(`+`));
++four+

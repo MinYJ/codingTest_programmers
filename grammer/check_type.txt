@@ -1,3 +1,7 @@
 (1) isNaN
 isNaN(Number('1')) -> false
 isNaN(Number('a')) -> true
+
+(2) undefined
+        before = (before === undefined) ? "0" : before;
+        after = (after === undefined) ? "0" : after;
