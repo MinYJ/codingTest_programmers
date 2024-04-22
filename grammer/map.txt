@@ -38,3 +38,7 @@ Map(3) { 'rardss' => '123', 'yyoom' => '1234', 'meosseugi' => '1234' }
 (8)
 Map.has('키') => 키의 존재여부를 true/false로 나타낸다
 Map.get('카') => 키에 해당되는 값을 나타낸다 값이 없을 경우 undefined가 나온다
+
+(9) values(), keys()
+values(): 값을 구해준다
+keys(): 키를 구해준다

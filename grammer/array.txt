@@ -5,10 +5,17 @@ Array(n).fill().map((_,i)=> i+1)
 (2) 배열, 문자열 모두가능
 원하는데이터유무확인 -> includes
 원하는데이터인덱스확인 -> indexOf
+원하는데이터마지막인덱스확인 -> lastIndexOf
 
-(3) 마지막요소만 꺼내고 싶을때
+
+(3) slice(0, -1) 과 slicce(-1)
+
+(3.1)마지막요소만 꺼내고 싶을때
 array.slice(-1)
 array[array.length-1]
+
+(3.2)뒤에제외한요소가져올때
+array.slice(0, -1)
 
 (4)
 forEach는 무조건 순회하기때문에 return false가 먹히지 않음
@@ -19,6 +26,7 @@ forEach는 return도 먹히지않는다
 let array = [...sameRange1, ...sameRange2, ...sameRange3];
 
 (6) 이중for문(얕은복사조심)
+(6.1) 얕은복사되는경우
     // let array = [...Array(n)];
     // array = array.map((v)=>[...Array(n)]);
     // array[0][0] = 5;
@@ -28,5 +36,15 @@ let array = [...sameRange1, ...sameRange2, ...sameRange3];
     array[0][0] = 1;
     console.log(array)
 
-Array.from(new Array(n), () => new Array(n).fill(0))
+(6.2) 깊은복사
+방법1
+Array.from(new Array(n), () => new Array(n).fill(0));
 
+방법2
+const tableData = [...state.tableData];
+tableData.forEach((row,i)=>tableData[i] = [...row]);
+
+
+(6.3) 2차원배열검사시 제한두는방법
+if(array[-1]) //하고싶은로직
+if(row < 0 || row > (tableData.length-1) || cell < 0 || cell > (tableData[0].length-1)) return; //상하좌우범위

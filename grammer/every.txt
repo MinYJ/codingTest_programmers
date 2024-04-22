@@ -1,0 +1,24 @@
+const tableData = [
+    ['x','x','x'], 
+    ['','x','x'], 
+    ['x','x','x']
+];
+
+(1)
+'', undefined, null 똑같이 falsy이다
+
+(2)
+const test = tableData.every((row)=> row.every(col=>col))
+
+(3)
+
+// const winner = (row, cell) => {
+//     const validation = [
+//         tableData.every((v,i)=> tableData[row][i] === turn),
+//         tableData.every((v,i) => tableData[i][cell] === turn),
+//         tableData.every((v,i) => tableData[i][i] === turn),
+//         tableData.every((v,i) => tableData[i][tableData.length - i] === turn)
+//     ]
+//     return validation.some(v=>v);
+// }
+// console.log(winner(0,0));
