@@ -1,0 +1,5 @@
+(1)
+- maps are specifically optimized for this use case of frequently adding and removing keys
+
+(2) Built-in keys problem
+even though object should be supposed to be empty, it has values already
